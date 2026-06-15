@@ -9,7 +9,8 @@ description = "Кастомный Middleware и коды ответов для F
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-    "fastapi>=0.137.0",
+    "fastapi~=0.137.0",
+    "uvicorn~=0.49.0",
 ]
 
 [tool.setuptools]
