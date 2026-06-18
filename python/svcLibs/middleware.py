@@ -51,9 +51,10 @@ class ParseAuthMiddleware(BaseHTTPMiddleware):
         auth_type = request.headers.get("eauth-type", "guest")
         raw_user_id = request.headers.get("eauth-user-id")
         raw_roles = request.headers.get("eauth-user-roles")
-        server_name = request.headers.get("eauth-server-name")
+        raw_server_name = request.headers.get("eauth-server-name")
 
         user_id = None
+        server_name = None
         user_roles = []
 
         if auth_type == "user":
@@ -74,7 +75,7 @@ class ParseAuthMiddleware(BaseHTTPMiddleware):
                     return error_response(InternalServerError(), request.headers.get("X-Trace-Id"))
 
         elif auth_type == "server":
-            pass
+            server_name = raw_server_name
         elif auth_type == "guest":
             pass
         else:
