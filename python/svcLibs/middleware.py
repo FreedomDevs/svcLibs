@@ -6,7 +6,7 @@ from fastapi import FastAPI, Request
 from fastapi.exceptions import RequestValidationError
 from starlette.middleware.base import BaseHTTPMiddleware
 
-from responses import error_response
+from .responses import error_response
 from .codes import InternalServerError, ValidationError
 
 async def internal_error_handler(request: Request, exc: Exception):
