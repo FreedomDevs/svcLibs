@@ -45,6 +45,24 @@ Query:
 - 400, USER_INVALID_DATA — если idOrName пуст или отсутствует
 - 404, USER_NOT_FOUND — если пользователь не найден
 
+# GET /users/:idOrName/permissions — получение суммарных прав пользователя
+Query:
+- servicename=<имя сервиса типо svc-users> — имя сервера **ОБЯЗАТЕЛЬНО**
+
+Ответ (200 USER_FETCHED_OK):
+```jsonc
+[
+  "create",
+  "read_password",
+  "delete"
+]
+```
+
+Возможные ошибки:
+- 500, USER_INTERNAL_ERROR — если какая-то критическая ошибка там (практически невозможно)
+- 400, USER_INVALID_DATA — если idOrName пуст или отсутствует
+- 404, USER_NOT_FOUND — если пользователь не найден
+
 # GET /users/me — получение информации по текущему пользователю (требует чтобы запрос пришел от user-а с авторизацией, через gateway)
 Ответ (200 USER_FETCHED_OK):
 ```jsonc
