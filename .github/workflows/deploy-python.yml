@@ -1,0 +1,12 @@
+name: Build and Deploy svcLibs python to Registry
+
+on:
+  workflow_dispatch:
+
+jobs:
+  call-shared-workflow:
+    secrets: inherit 
+    uses: FreedomDevs/.github/.github/workflows/service-deploy2.yml@main
+    with:
+      SERVICE_NAME: "svc-whitelist"
+      DOCKERFILE_PATH: "./Dockerfile-python"
