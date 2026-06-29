@@ -8,5 +8,5 @@ jobs:
     secrets: inherit 
     uses: FreedomDevs/.github/.github/workflows/service-deploy2.yml@main
     with:
-      SERVICE_NAME: "svc-whitelist"
+      SERVICE_NAME: "svclibs"
       DOCKERFILE_PATH: "./Dockerfile-python"
