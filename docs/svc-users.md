@@ -127,6 +127,30 @@ Query:
 - 400, USER_INVALID_DATA — если почему-то не передался userId
 - 404, USER_NOT_FOUND — если пользователь не найден
 
+# PUT /users/:idOrName/password — заменяет права пользователя
+Ответ 200, PERMISSIONS_UPDATED:
+```jsonc
+{
+  "password": "P8iLFx5IjxMTeSkx" //Новый пароль для замены
+}
+```
+
+Возможные ошибки:
+- 400, USER_INVALID_DATA — если почему-то не передался userId
+- 404, USER_NOT_FOUND — если пользователь не найден
+
+# PUT /users/:idOrName/name — заменяет права пользователя
+Ответ 200, PERMISSIONS_UPDATED:
+```jsonc
+{
+  "name": "foksik" //Новый Name(login) для замены
+}
+```
+
+Возможные ошибки:
+- 400, USER_INVALID_DATA — если почему-то не передался userId
+- 404, USER_NOT_FOUND — если пользователь не найден
+
 # POST /groups — создаёт новую группу
 Запрос:
 ```jsonc
