@@ -128,10 +128,16 @@ Query:
 - 404, USER_NOT_FOUND — если пользователь не найден
 
 # PUT /users/:idOrName/password — заменяет права пользователя
+Тело:
+```jsonc
+{
+  "password": "P8iLFx5IjxMTeSkx"  //Новый пароль для замены
+}
+```
 Ответ 200, PERMISSIONS_UPDATED:
 ```jsonc
 {
-  "password": "P8iLFx5IjxMTeSkx" //Новый пароль для замены
+  "password": "P8iLFx5IjxMTeSkx" //Новый пароль
 }
 ```
 
@@ -140,10 +146,16 @@ Query:
 - 404, USER_NOT_FOUND — если пользователь не найден
 
 # PUT /users/:idOrName/name — заменяет права пользователя
-Ответ 200, PERMISSIONS_UPDATED:
+Тело:
 ```jsonc
 {
   "name": "foksik" //Новый Name(login) для замены
+}
+```
+Ответ 200, PERMISSIONS_UPDATED:
+```jsonc
+{
+  "name": "foksik" //Новый Name(login)
 }
 ```
 
