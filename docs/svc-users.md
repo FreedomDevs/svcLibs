@@ -134,7 +134,7 @@ Query:
   "password": "P8iLFx5IjxMTeSkx"  //Новый пароль для замены
 }
 ```
-Ответ 200, PERMISSIONS_UPDATED:
+Ответ 200, PASSWORD_UPDATED:
 ```jsonc
 {
   "password": "P8iLFx5IjxMTeSkx" //Новый пароль
@@ -152,7 +152,7 @@ Query:
   "name": "foksik" //Новый Name(login) для замены
 }
 ```
-Ответ 200, PERMISSIONS_UPDATED:
+Ответ 200, NAME_UPDATED:
 ```jsonc
 {
   "name": "foksik" //Новый Name(login)
